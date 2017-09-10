@@ -1,6 +1,6 @@
-: DJBTool v1.04 Batch Script created by djb77 / XDA Developers
+: DJBTool v1.05 Batch Script created by djb77 / XDA Developers
 : Inspired and slightly based on APK-MuiltiTool by raziel23x / XDA Developers
-: Build Date: 24th January 2017
+: Build Date: 10th September 2017
 
 : INITIAL SETUP
 : -------------
@@ -11,7 +11,7 @@ if not exist "%~dp0files_new/" (mkdir "%~dp0files_new")
 if not exist "%~dp0files_original/" (mkdir "%~dp0files_original")
 if not exist "%~dp0files_to_sign/" (mkdir "%~dp0files_to_sign")
 if not exist "%~dp0framework/" (mkdir "%~dp0framework")
-set djbtoolversion=1.04
+set djbtoolversion=1.05
 set djbtoollog=%~dp0djbtool_log.log
 title DJBTool v%djbtoolversion%
 cls
@@ -135,7 +135,7 @@ goto setup2
 @echo Decompiling %capp%
 cd %~dp0bin
 if exist "%~dp0files_decompiled/%capp%" (rmdir /S /Q "%~dp0files_decompiled/%capp%")
-java -Xmx%heapy%m -jar %~dp0bin/apktool.jar d %~dp0files_original/%capp% -o %~dp0files_decompiled/%capp% >nul
+java -Xmx%heapy%m -jar %~dp0bin/apktool.jar d -b %~dp0files_original/%capp% -o %~dp0files_decompiled/%capp% >nul
 if errorlevel 1 (
 @echo "An Error Occurred, Please Check The Log"
 pause
@@ -156,7 +156,7 @@ for %%f in (*.apk) do (
 @echo Decompiling %%f
 cd %~dp0bin
 if exist "%~dp0files_decompiled/%%f" (rmdir /S /Q "%~dp0files_decompiled/%%f")
-java -Xmx%heapy%m -jar %~dp0bin/apktool.jar d %~dp0files_original/%%f -o %~dp0files_decompiled/%%f >nul
+java -Xmx%heapy%m -jar %~dp0bin/apktool.jar d -b %~dp0files_original/%%f -o %~dp0files_decompiled/%%f >nul
 if errorlevel 1 (
 @echo "An Error Occurred, Please Check The Log"
 pause
@@ -167,7 +167,7 @@ for %%f in (*.jar) do (
 @echo Decompiling %%f
 cd %~dp0bin
 if exist "%~dp0files_decompiled/%%f" (rmdir /S /Q "%~dp0files_decompiled/%%f")
-java -Xmx%heapy%m -jar %~dp0bin/apktool.jar d %~dp0files_original/%%f -o %~dp0files_decompiled/%%f >nul
+java -Xmx%heapy%m -jar %~dp0bin/apktool.jar d -b %~dp0files_original/%%f -o %~dp0files_decompiled/%%f >nul
 if errorlevel 1 (
 @echo "An Error Occurred, Please Check The Log"
 pause
