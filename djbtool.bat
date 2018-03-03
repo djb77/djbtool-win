@@ -1,6 +1,6 @@
-: DJBTool v1.05 Batch Script created by djb77 / XDA Developers
+: DJBTool v1.06 Batch Script created by djb77 / XDA Developers
 : Inspired and slightly based on APK-MuiltiTool by raziel23x / XDA Developers
-: Build Date: 10th September 2017
+: Build Date: 3rd March 2018
 
 : INITIAL SETUP
 : -------------
@@ -11,7 +11,7 @@ if not exist "%~dp0files_new/" (mkdir "%~dp0files_new")
 if not exist "%~dp0files_original/" (mkdir "%~dp0files_original")
 if not exist "%~dp0files_to_sign/" (mkdir "%~dp0files_to_sign")
 if not exist "%~dp0framework/" (mkdir "%~dp0framework")
-set djbtoolversion=1.05
+set djbtoolversion=1.06
 set djbtoollog=%~dp0djbtool_log.log
 title DJBTool v%djbtoolversion%
 cls
