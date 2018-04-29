@@ -1,9 +1,9 @@
-DJBTool version 1.06
+DJBTool version 1.07
 Inspired by APKMultiTool (created by raziel23x / XDA)
 Created by djb77 / XDA (some portions from raziel23x / XDA)
 
-Build Date: 3rd March 2018
-Using APKTool 2.3.1 and 7-Zip 18.01
+Build Date: 30th April 2018
+Using APKTool 2.3.2 and 7-Zip 18.01
 
 QUICK INSTRUCTIONS
 ------------------
